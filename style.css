@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    cursor: pointer;
+}
+
+ ul {
+    display: flex;
+
+}
+
+ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 25px;
+}
+
+ul li a:hover {
+    color: rgb(85, 26, 26);
+}
+
+
+li a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0px;
+    background: #c4c4f7;
+    transition: all 0.5s;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+    background: #c4c4f7;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 15px 30px;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8181cc;
+}
+
+
+/* Main Part of the page */
+main img {
+    width: 700px;
+    height: auto;
+}
+
+
+
+main {
+    display: flex;
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+}
+
+.content-left {
+    width: 30%;
+}
+
+main h1 {
+    font-size: 54px;
+    color: #133b4f;
+    text-transform: uppercase;
+}
+
+main h2 {
+    font-size: 25px;
+    color: #fca70c;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+main p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin: 20px 10px
+}
+
+@media (max-width:768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+        
+    }
+
+    .content-left {
+        margin-left: 15px;
+    }
+
+    main img {
+        width: 100%;
+        border-radius: 10px;
+        
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Align items to the center horizontally */
+            text-align: center; /* Align text center */
+        }
+    
+        .logo {
+            margin-bottom: 20px; /* Add margin below the logo */
+        }
+    
+        button {
+            margin: 0 auto; /* Center the button horizontally */
+        }
+    }
+
+}
